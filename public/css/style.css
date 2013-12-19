@@ -1,0 +1,23 @@
+body {
+	font-size: 14px;
+	font-family: 'Noto Serif', serif;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	padding-left: 50px;
+}
+
+header {
+	width: 400px;
+	margin-right: 50px;
+}
+
+.howto {
+	width: 400px;
+	float: left;
+	margin-right: 50px;
+}
+
+.twitter-timeline {
+	height: 80%;
+}

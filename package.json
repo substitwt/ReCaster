@@ -1,0 +1,32 @@
+{
+  "name": "recaster",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "0.7.10",
+    "express": "3.4.6",
+    "lodash": "2.4.1",
+    "twit": "1.1.11",
+    "string": "1.7.0",
+    "request": "2.29.0",
+    "cheerio": "0.12.4",
+    "moment": "2.4.0",
+    "connect": "2.12.0",
+    "jade": "0.35.0",
+    "marked": "0.2.10",
+    "rssi": "0.0.5"
+  },
+  "engines": {
+    "node": "0.10.22"
+  },
+  "devDependencies": {
+    "mocha": "~1.15.1"
+  }
+}

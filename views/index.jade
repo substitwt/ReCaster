@@ -1,0 +1,50 @@
+extends /views/layout
+
+block content
+	if (homepageText)
+		div.howto!= marked(homepageText)
+	else
+		div.howto
+			:markdown
+				**#{thisUserDescription}**
+
+				### How
+				1. Follow me [@#{thisUserScreenName}][twitter]
+				2. Send me a direct message.
+				3. Let me speak for you.
+
+				### Details
+				- I only tweet direct messages sent to [@#{thisUserScreenName}][twitter]
+				- My tweets are _not_ retweets or mentions.
+				- Private messages appearing as tweets on my timeline will be deleted from our respective inbox after 1 minute from being published.
+				- Tweets will never be deleted from [@#{thisUserScreenName}][twitter]'s timeline.
+
+				### Limits
+				Limits are per user.
+
+				- Max #{tweetsLimit} messages per #{limitResetIntervalSec} seconds window. A "limit exceeded" notification is sent to you when this limit is reached. The limit is lifted automatically after #{limitResetIntervalSec} seconds.
+				- If the above limit is triggered more than #{maxExceeds} times you will be sent a simple human verification challenge.
+
+				### Commands
+				- **Unfollow**. To ask the bot to unfollow you send any of the these words as a private message or public tweet:
+					- `unfollow`
+					- `unfollow me`
+					- `bye`
+					- `stop`
+
+				[twitter]: https://twitter.com/#{thisUserScreenName}
+
+	a.twitter-timeline(data-dnt="true", href="https://twitter.com/savethetweet", data-widget-id="411987331084607488") Tweets di @savethetweet
+	script.
+		!function(d,s,id){
+			var js,
+					fjs = d.getElementsByTagName(s)[0],
+					p = /^http:/.test(d.location) ? 'http':'https';
+			if(!d.getElementById(id)){
+				js = d.createElement(s);
+				js.id = id;
+				js.src = p+"://platform.twitter.com/widgets.js";
+				fjs.parentNode.insertBefore(js,fjs);
+			}
+		}(document,"script","twitter-wjs");
+

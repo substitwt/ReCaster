@@ -1,0 +1,19 @@
+# Whole dirs
+node_modules/
+~*/
+
+# Dir content
+logs/*
+
+# Files
+~*
+.DS_Store
+npm-debug.log
+nohup.out
+config/runtime.json
+credentials.json
+
+# Include
+!.gitdir
+!.gitkeep
+!.gitignore
